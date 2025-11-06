@@ -1,13 +1,13 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
-/* NAVBAR pegado al hacer scroll + estética oscura */
+/* NAVBAR pegado al hacer scroll  */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1200;
   background: rgba(0, 0, 0, .92);
-  border-bottom: 3px solid v.$rojo;  // 🔹 línea roja fija
+  border-bottom: 3px solid v.$rojo;  //  línea roja fija
   backdrop-filter: saturate(120%) blur(4px);
 
   .nav-wrap {
@@ -61,7 +61,7 @@
       &[aria-current="page"] {
         font-weight: 700;
         opacity: 1;
-        border-bottom: 2px solid v.$rojo; // 🔹 subrayado rojo del link activo
+        border-bottom: 2px solid v.$rojo; //  subrayado rojo del link activo
       }
 
       &:hover { opacity: 1; }

@@ -1,6 +1,6 @@
 @use 'variables' as v;
 
-// ===== Mixins útiles =====
+// ===== Mixins  =====
 @mixin container($max: 1200px, $pad: 16px) {
   width: min(100% - $pad*2, $max);
   margin-inline: auto;

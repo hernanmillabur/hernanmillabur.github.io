@@ -94,7 +94,7 @@ a:hover {
   color: #c9c9c9 !important;
 }
 
-.skills-hero { /* personaliza si quieres */ }
+.skills-hero { /* 1.1 */ }
 
 .skills-grid {
   display: grid;
@@ -288,7 +288,7 @@ a:hover {
   height: auto;
 }
 
-/* NAVBAR pegado al hacer scroll + estética oscura */
+/* NAVBAR pegado al hacer scroll  */
 .site-header {
   position: sticky;
   top: 0;
@@ -417,7 +417,7 @@ a:hover {
   justify-content: center;
   text-align: center;
   color: #fff;
-  /* Fondo de red o malla de datos */
+  /* Fondo de rojo*/
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)), url("../img/datanetwork_pimk.jpg") center/cover no-repeat;
   background-attachment: fixed; /* efecto elegante al hacer scroll */
   /* Botones */
@@ -451,7 +451,7 @@ a:hover {
 
 /* ====== Efecto de brillo reutilizable para títulos del hero ====== */
 .shine-title {
-  /* si ya defines tamaño en otro lado, puedes quitar el font-size */
+  /* font-size */
   font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 800;
   letter-spacing: 0.4px;
@@ -546,7 +546,7 @@ a:hover {
   filter: blur(18px);
 }
 
-/* --------- VIÑETA (card grande con glow) --------- */
+/* --------- VIÑETA  --------- */
 .contact-shell {
   position: relative;
   max-width: 1200px;
@@ -575,7 +575,7 @@ a:hover {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px; /* grosor del borde */
+  padding: 1px;
   background: linear-gradient(120deg, rgba(255, 255, 255, 0.18), rgba(225, 6, 0, 0.45), rgba(255, 255, 255, 0.12));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
@@ -584,7 +584,7 @@ a:hover {
   opacity: 0.9;
 }
 
-/* Grid interno de la viñeta */
+/* grid interno de la viñeta */
 .contact-shell__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -607,7 +607,7 @@ a:hover {
     grid-column: span 4;
   }
 }
-/* Paneles internos (form y datos) */
+/* Paneles internos */
 .contact-panel {
   border-radius: 1rem;
   background: rgba(0, 0, 0, 0.35);
@@ -616,7 +616,7 @@ a:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) inset;
 }
 
-/* Inputs */
+/* inputs */
 .contact-panel .form-control,
 .contact-panel textarea {
   background: rgba(255, 255, 255, 0.04);
@@ -674,7 +674,7 @@ footer.bg-dark a.text-light:hover::after {
 }
 
 /* ================================
-   Sección Conocimientos (ampliada)
+   Sección Conocimientos 
    ================================ */
 .conocimientos {
   position: relative;
@@ -758,7 +758,7 @@ footer.bg-dark a.text-light:hover::after {
   }
 }
 /* ===============================
-   Sección: Sobre mí (sin JS)
+   Sección: Sobre mí 
    =============================== */
 .about {
   padding: clamp(3rem, 6vw, 7rem) 0;
@@ -790,7 +790,7 @@ footer.bg-dark a.text-light:hover::after {
   color: rgba(255, 255, 255, 0.86);
 }
 
-/* Viñeta principal (foto + texto) con glow */
+/* Viñeta principal con glow */
 .about-shell {
   position: relative;
   max-width: 1200px;
@@ -907,7 +907,7 @@ footer.bg-dark a.text-light:hover::after {
   filter: blur(1px);
 }
 
-/* Bloque "Lo que hago" en pastilla */
+/* Bloque "Lo que hago" */
 .about-pill {
   max-width: 1200px;
   margin-inline: auto;
@@ -941,7 +941,7 @@ footer.bg-dark a.text-light:hover::after {
   margin-bottom: 0.6rem;
 }
 
-/* Viñetas bonitas */
+/* Viñetas  */
 .skill-col ul {
   margin: 0;
   padding-left: 1.1rem;

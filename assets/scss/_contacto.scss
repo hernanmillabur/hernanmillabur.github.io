@@ -17,7 +17,7 @@
   }
 }
 
-/* --------- VIÑETA (card grande con glow) --------- */
+/* --------- VIÑETA  --------- */
 .contact-shell {
   position: relative;
   max-width: 1200px;
@@ -48,7 +48,7 @@
     content: "";
     position: absolute; inset: 0;
     border-radius: inherit;
-    padding: 1px; /* grosor del borde */
+    padding: 1px; 
     background: linear-gradient(120deg,
                   rgba(255,255,255,.18),
                   rgba(v.$rojo,.45),
@@ -63,7 +63,7 @@
   }
 }
 
-/* Grid interno de la viñeta */
+/* grid interno de la viñeta */
 .contact-shell__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -78,7 +78,7 @@
   .contacto-side { grid-column: span 4; }
 }
 
-/* Paneles internos (form y datos) */
+/* Paneles internos */
 .contact-panel {
   border-radius: 1rem;
   background: rgba(0,0,0,.35);
@@ -87,7 +87,7 @@
   box-shadow: 0 8px 24px rgba(0,0,0,.25) inset;
 }
 
-/* Inputs */
+/* inputs */
 .contact-panel .form-control,
 .contact-panel textarea {
   background: rgba(255,255,255,.04);

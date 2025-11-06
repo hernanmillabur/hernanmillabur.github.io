@@ -1,7 +1,7 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
-// ===== Secciones y layouts comunes =====
+// ===== Secciones ==
 .section { @include m.section(); }
 
 /* Separadores sutiles entre bloques */
@@ -15,7 +15,7 @@
 .section .text-muted { color: v.$gris-1 !important; }
 
 // ---------- SKILLS ----------
-.skills-hero { /* personaliza si quieres */ }
+.skills-hero { /* 1.1 */ }
 
 .skills-grid {
   display: grid; gap: 1.25rem; grid-template-columns: 1fr;
@@ -106,7 +106,7 @@
     width: 44px; height: 44px;
     display: grid; place-items: center;
     background: v.$rojo;       // Fondo rojo
-    color: v.$negro;           // Ícono negro 👈
+    color: v.$negro;           // Ícono negro 
     border-radius: 12px;
     box-shadow: v.$shadow-soft;
   }

@@ -2,7 +2,7 @@
 @use 'mixins' as m;
 @use 'sass:color';
 
-// ===== Base / Reset general =====
+// ===== Base =====
 * { box-sizing: border-box; }
 html { font-size: 100%; }
 
@@ -27,13 +27,13 @@ a {
   &:hover { color: v.$rojo; }
 }
 
-// ===== Overrides Bootstrap =====
+// ===== O Bootstrap =====
 
 // Evita íconos o textos "azules"
 .text-primary,
 .bi { color: v.$rojo !important; }
 
-// Botones primarios con tu rojo característico
+// Botones primarios 
 .btn-primary {
   background-color: v.$rojo !important;
   border-color: v.$rojo !important;
@@ -49,7 +49,7 @@ a {
   }
 }
 
-// Botones outline (rojo con borde)
+// Botones outline 
 .btn-outline-primary {
   color: v.$rojo !important;
   border-color: v.$rojo !important;
@@ -60,13 +60,13 @@ a {
   }
 }
 
-// Fondo claro (más gris oscuro que blanco)
+// Fondo claro 
 .bg-light { 
   background-color: #111 !important; 
   color: v.$blanco !important;
 }
 
-// ===== Animaciones globales =====
+// ===== Animaciones  =====
 .fade-in {
   opacity: 0;
   transform: translateY(6px);

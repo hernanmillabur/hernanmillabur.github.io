@@ -2,7 +2,7 @@
 @use 'mixins' as m;
 
 /* ===============================
-   Sección: Sobre mí (sin JS)
+   Sección: Sobre mí 
    =============================== */
 .about {
   padding: clamp(3rem, 6vw, 7rem) 0;
@@ -37,7 +37,7 @@
   }
 }
 
-/* Viñeta principal (foto + texto) con glow */
+/* Viñeta principal con glow */
 .about-shell {
   position: relative;
   max-width: 1200px;
@@ -142,7 +142,7 @@
   }
 }
 
-/* Bloque "Lo que hago" en pastilla */
+/* Bloque "Lo que hago" */
 .about-pill {
   max-width: 1200px; margin-inline: auto;
   background: rgba(255,255,255,.03);
@@ -165,7 +165,7 @@
 
 .skill-col h3 { font-weight: 800; margin-bottom: .6rem; }
 
-/* Viñetas bonitas */
+/* Viñetas  */
 .skill-col ul {
   margin: 0; padding-left: 1.1rem; list-style: none;
 }

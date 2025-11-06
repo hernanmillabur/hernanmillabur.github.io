@@ -9,7 +9,7 @@
   text-align: center;
   color: v.$blanco;
 
-  /* Fondo de red o malla de datos */
+  /* Fondo de rojo*/
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)),
     url("../img/datanetwork_pimk.jpg") center/cover no-repeat;
@@ -46,7 +46,7 @@
 
 /* ====== Efecto de brillo reutilizable para títulos del hero ====== */
 .shine-title {
-  /* si ya defines tamaño en otro lado, puedes quitar el font-size */
+  /* font-size */
   font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 800;
   letter-spacing: .4px;
