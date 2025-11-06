@@ -1,0 +1,86 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: v.$blanco;
+
+  /* Fondo de red o malla de datos */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)),
+    url("../img/datanetwork_pimk.jpg") center/cover no-repeat;
+  background-attachment: fixed; /* efecto elegante al hacer scroll */
+
+  /* Botones */
+  .btn {
+    border-radius: v.$radius;
+    box-shadow: v.$shadow-soft;
+    transition: transform 0.06s ease, box-shadow 0.2s ease;
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: v.$shadow;
+    }
+    &:active {
+      transform: translateY(0);
+      box-shadow: v.$shadow-soft;
+    }
+  }
+
+  /* Textos principales */
+  h1 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  p.lead {
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+/* ====== Efecto de brillo reutilizable para títulos del hero ====== */
+.shine-title {
+  /* si ya defines tamaño en otro lado, puedes quitar el font-size */
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: .4px;
+
+  /* barrido de luz */
+  --shine-speed: 5s;
+  background: linear-gradient(
+    90deg,
+    v.$blanco 0%,
+    rgba(255,255,255,.95) 35%,
+    rgba(v.$rojo,.8) 55%,
+    v.$blanco 75%,
+    v.$blanco 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 250% 100%;
+  animation: shineSweep var(--shine-speed) ease-in-out infinite;
+
+  /* mejora de legibilidad sobre imagen */
+  text-shadow: 0 2px 18px rgba(0,0,0,.35);
+}
+
+/* pausa suave al hover (opcional) */
+.shine-title:hover { animation-play-state: paused; }
+
+/* keyframes */
+@keyframes shineSweep {
+  0%   { background-position: 200% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .shine-title { animation: none !important; }
+}

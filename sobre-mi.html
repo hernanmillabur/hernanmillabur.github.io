@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sobre mí | Portafolio</title>
+  <meta name="description" content="Perfil orientado a análisis de datos, automatización con Python y soluciones GIS con ArcGIS.">
+  <link rel="canonical" href="https://tu-dominio/sobre-mi.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sobre mí | Portafolio" />
+  <meta property="og:description" content="Datos, Python y ArcGIS aplicados a soluciones reales." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Estilos generados por Sass -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- NAV (sin JS) -->
+  <header class="site-header" aria-label="Navegación principal">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Hernan Millabur Ingeniero Informatico</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+      <label for="nav-toggle" class="burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a class="active" href="sobre-mi.html" aria-current="page">Sobre mí</a></li>
+          <li><a href="mis-servicios.html">Servicios</a></li>
+          <li><a href="mis-conocimientos.html">Conocimientos</a></li>
+          <li><a href="mi-contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SOBRE MÍ (con ambiente y brillo sutil) -->
+    <section class="about">
+      <!-- Encabezado -->
+      <div class="about-hero container text-center">
+        <h1 class="mb-2 shine-title">Sobre mí</h1>
+        <p class="lead">Transformo datos en decisiones: análisis, automatización con Python y soluciones GIS con ArcGIS.</p>
+      </div>
+
+      <!-- Viñeta principal (foto + texto) con glow -->
+      <div class="about-shell">
+        <div class="about-grid">
+          <div class="about-photo">
+            <figure class="photo">
+              <img src="assets/img/yo_gato.jpg" alt="Foto de perfil de Hernan Millabur" loading="lazy">
+            </figure>
+          </div>
+          <div class="about-text">
+            <h2>Quién soy</h2>
+            <p>
+              Soy una persona curiosa y meticulosa con foco en el <strong>análisis de datos</strong>, la <strong>automatización con Python</strong>
+              y el <strong>análisis geoespacial</strong> con ArcGIS. Disfruto construir flujos reproducibles y entregables claros
+              (Excel, TXT, reportes y mapas).
+            </p>
+            <p>
+              Mi objetivo es simplificar procesos, mejorar la calidad de la información y entregar resultados que se conviertan en acciones concretas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <!-- Lo que hago (pastilla) -->
+      <div class="about-pill container">
+        <h2 class="h4 mb-2">Lo que hago</h2>
+        <p class="mb-0">
+          Diseño y ejecuto <strong>pipelines de datos</strong> (extracción, limpieza y validación), desarrollo scripts de
+          <strong>automatización con Pandas/NumPy</strong> y preparo <strong>visualizaciones</strong> que ayudan a comunicar hallazgos.
+          En GIS, trabajo con <strong>ArcGIS Pro</strong> y <strong>ArcPy</strong> para generar mapas temáticos y procesos geográficos automatizados.
+        </p>
+      </div>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <!-- Habilidades (3 columnas con bullets LED) -->
+      <div class="skills-list">
+        <div class="skill-col">
+          <h3>🐍 Python</h3>
+          <ul>
+            <li>Pandas, NumPy y Matplotlib</li>
+            <li>ETL, limpieza y validación de datos</li>
+            <li>Exportes y reportes automatizados</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>📊 Análisis de datos</h3>
+          <ul>
+            <li>EDA y visualización</li>
+            <li>Métricas y seguimiento de KPIs</li>
+            <li>Documentación y reproducibilidad</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>🗺️ GIS / ArcGIS</h3>
+          <ul>
+            <li>ArcGIS Pro y ArcPy</li>
+            <li>Mapas temáticos y geoprocesos</li>
+            <li>Automatización de flujos GIS</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA final (más contraste) -->
+      <div class="about-cta">
+        <h2 class="h4 mb-2">¿Charlamos?</h2>
+        <p class="mb-3">Si necesitas estructurar, automatizar o visualizar tus datos, puedo ayudarte a convertirlos en resultados medibles.</p>
+        <a class="btn btn-primary" href="mi-contacto.html">Contactar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+      <small>© 2025 Hernan Millabur</small>
+      <nav class="d-flex gap-3" aria-label="Enlaces del pie">
+        <a class="text-light" href="https://github.com/tu-usuario" target="_blank" rel="noopener">GitHub</a>
+        <a class="text-light" href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="text-light" href="mi-contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

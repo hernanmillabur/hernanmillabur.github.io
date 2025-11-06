@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Hernan Millabur | Datos, Python y ArcGIS</title>
+  <meta name="description" content="Análisis de datos, automatización con Python y soluciones GIS con ArcGIS para transformar información en decisiones." />
+  <link rel="canonical" href="https://tu-dominio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hernan Millabur | Datos, Python y ArcGIS" />
+  <meta property="og:description" content="Pipelines de datos, automatización con Python y mapas temáticos con ArcGIS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+
+  <!-- Fuentes + Bootstrap + Iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Estilos del sitio (compilado de Sass) -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="site-header" aria-label="Navegación principal">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Hernan Millabur Ingeniero Informático</a>
+
+      <!-- Toggle accesible (sin JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" />
+      <label for="nav-toggle" class="burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a class="active" href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="mis-servicios.html">Servicios</a></li>
+          <li><a href="mis-conocimientos.html">Conocimientos</a></li>
+          <li><a href="mi-contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO (fondo definido en _hero.scss) -->
+  <section class="hero text-white d-flex align-items-center fade-in">
+    <div class="container text-center">
+      <h1 class="shine-title">Datos, Python y ArcGIS para decisiones reales</h1>
+      <p class="lead mb-4">
+        Construyo pipelines reproducibles, automatizo procesos y creo mapas temáticos que explican lo importante.
+      </p>
+      <div class="d-flex gap-2 justify-content-center flex-wrap">
+        <a class="btn btn-primary btn-lg fade-in" href="mis-conocimientos.html">
+          <i class="bi bi-lightbulb-fill me-2"></i>Ver conocimientos
+        </a>
+        <a class="btn btn-outline-light btn-lg fade-in" href="mi-contacto.html">
+          <i class="bi bi-chat-dots me-2"></i>Hablemos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿CÓMO TE AYUDO? -->
+  <section class="section fade-in">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="h1 mb-2">¿Cómo te ayudo?</h2>
+        <p class="text-muted mb-0">Información ordenada, procesos repetibles y visualizaciones que cuentan una historia.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="p-4 border rounded-3 h-100 text-center fade-in">
+            <i class="bi bi-graph-up-arrow fs-1 text-primary d-block mb-2"></i>
+            <h3 class="h5">Análisis de Datos</h3>
+            <p>EDA, métricas y calidad de datos para descubrir patrones y oportunidades accionables.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-4 border rounded-3 h-100 text-center fade-in">
+            <i class="bi bi-terminal fs-1 text-primary d-block mb-2"></i>
+            <h3 class="h5">Automatización con Python</h3>
+            <p>ETL con Pandas/NumPy, validaciones y exportes a Excel/TXT para reportes consistentes.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-4 border rounded-3 h-100 text-center fade-in">
+            <i class="bi bi-geo-alt-fill fs-1 text-primary d-block mb-2"></i>
+            <h3 class="h5">GIS con ArcGIS</h3>
+            <p>Mapas temáticos, geoprocesos y flujos automatizados con ArcGIS Pro y ArcPy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTACADOS -->
+  <section class="section bg-light fade-in">
+    <div class="container">
+      <div class="d-flex align-items-end justify-content-between mb-3">
+        <div>
+          <h2 class="h1 mb-0">Capacidades clave</h2>
+          <p class="text-muted mb-0">Un vistazo rápido a lo que puedo implementar en tu proceso.</p>
+        </div>
+        <a class="btn btn-outline-primary fade-in" href="mis-servicios.html">Ver servicios</a>
+      </div>
+
+      <div class="row g-4">
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm fade-in">
+            <img src="assets/img/datapipeline.png" class="card-img-top" alt="Ilustración de análisis de datos" />
+            <div class="card-body">
+              <h3 class="h5">Pipelines reproducibles</h3>
+              <p>Extracción, limpieza y validación con documentación para repetir y escalar.</p>
+              <a href="mis-servicios.html#pipelines" class="stretched-link">Ver más</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm fade-in">
+            <img src="assets/img/automatico.webp" class="card-img-top" alt="Automatización con Python" />
+            <div class="card-body">
+              <h3 class="h5">Automatización y reportes</h3>
+              <p>Scripts que generan salidas consistentes (Excel/TXT) y reducen tareas manuales.</p>
+              <a href="mis-servicios.html#automatizacion" class="stretched-link">Ver más</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm fade-in">
+            <img src="assets/img/arcgis.jpg" class="card-img-top" alt="Mapas GIS" />
+            <div class="card-body">
+              <h3 class="h5">Mapas y procesos GIS</h3>
+              <p>Mapas temáticos, geocálculos y flujos con ArcGIS Pro + ArcPy.</p>
+              <a href="mis-servicios.html#gis" class="stretched-link">Ver más</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section text-center fade-in">
+    <div class="container">
+      <h2 class="h1 mb-2">¿Transformamos tus datos en decisiones?</h2>
+      <p class="lead mb-4">Cuéntame tu necesidad y definimos un flujo simple: de los datos al resultado.</p>
+      <a class="btn btn-primary btn-lg" href="mi-contacto.html">Contactar</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+      <small>© 2025 Hernan Millabur</small>
+      <nav class="d-flex gap-3" aria-label="Enlaces del pie">
+        <a class="text-light" href="https://github.com/tu-usuario" target="_blank" rel="noopener">GitHub</a>
+        <a class="text-light" href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="text-light" href="mi-contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.card {
+  background: v.$gris-3;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: v.$radius;
+  box-shadow: v.$shadow-soft;
+  transition: transform .12s ease, box-shadow .2s ease, border-color .2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: v.$shadow;
+    border-color: rgba(255,255,255,.12);
+  }
+
+  .card-img-top {
+    aspect-ratio: 3/2; object-fit: cover;
+  }
+
+  .card-body {
+    color: v.$blanco;
+    h3 { margin-bottom: .35rem; }
+    p  { color: v.$gris-1; }
+    a.stretched-link { @include m.hover-underline(v.$rojo); }
+  }
+}

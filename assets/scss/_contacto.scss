@@ -1,0 +1,119 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+/* Sección Contacto */
+.contacto {
+  padding: clamp(3rem, 6vw, 6rem) 0;
+  position: relative;
+
+  /* leve ambiente oscuro */
+  &::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(50% 60% at 50% 0%,
+                rgba(v.$rojo,.12), transparent 55%);
+    pointer-events: none;
+    filter: blur(18px);
+  }
+}
+
+/* --------- VIÑETA (card grande con glow) --------- */
+.contact-shell {
+  position: relative;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  border-radius: 1.25rem;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.04) inset,
+    0 20px 60px rgba(0,0,0,.45);
+
+  /* halo exterior suave */
+  &::before {
+    content: "";
+    position: absolute; inset: -10px;
+    border-radius: inherit;
+    background:
+      radial-gradient(60% 60% at 10% 0%, rgba(v.$rojo,.25), transparent 60%),
+      radial-gradient(50% 50% at 90% 10%, rgba(255,255,255,.10), transparent 70%),
+      linear-gradient(180deg, rgba(v.$rojo,.18), transparent 50%);
+    filter: blur(22px);
+    z-index: -1;
+  }
+
+  /* borde luminoso muy tenue */
+  &::after {
+    content: "";
+    position: absolute; inset: 0;
+    border-radius: inherit;
+    padding: 1px; /* grosor del borde */
+    background: linear-gradient(120deg,
+                  rgba(255,255,255,.18),
+                  rgba(v.$rojo,.45),
+                  rgba(255,255,255,.12));
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box, 
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    opacity: .9;
+  }
+}
+
+/* Grid interno de la viñeta */
+.contact-shell__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.contacto-form { grid-column: span 12; }
+.contacto-side { grid-column: span 12; }
+
+@media (min-width: 992px) {
+  .contacto-form { grid-column: span 8; }
+  .contacto-side { grid-column: span 4; }
+}
+
+/* Paneles internos (form y datos) */
+.contact-panel {
+  border-radius: 1rem;
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.06);
+  padding: clamp(1rem, 2vw, 1.25rem);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25) inset;
+}
+
+/* Inputs */
+.contact-panel .form-control,
+.contact-panel textarea {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  color: v.$blanco;
+  border-radius: .7rem;
+
+  &:focus {
+    border-color: rgba(v.$rojo,.55);
+    box-shadow: 0 0 0 3px rgba(v.$rojo,.18);
+    background: rgba(255,255,255,.06);
+    color: v.$blanco;
+  }
+}
+
+/* Botones */
+.contact-actions .btn-primary {
+  background: v.$rojo;
+  border-color: rgba(v.$rojo,.6);
+}
+.contact-actions .btn-outline-light {
+  border-color: rgba(255,255,255,.35);
+  color: v.$blanco;
+}
+
+/* Accesibilidad: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .contact-shell::before { filter: blur(14px); }
+}

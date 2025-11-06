@@ -1,0 +1,118 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// ===== Secciones y layouts comunes =====
+.section { @include m.section(); }
+
+/* Separadores sutiles entre bloques */
+.section + .section,
+.bg-light + .bg-light {
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+/* Títulos y subtítulos alineados visualmente */
+.section .h1, .section h1 { margin-bottom: .35rem; }
+.section .text-muted { color: v.$gris-1 !important; }
+
+// ---------- SKILLS ----------
+.skills-hero { /* personaliza si quieres */ }
+
+.skills-grid {
+  display: grid; gap: 1.25rem; grid-template-columns: 1fr;
+  @include m.media(md) { grid-template-columns: repeat(2, 1fr); }
+  @include m.media(lg) { grid-template-columns: repeat(3, 1fr); }
+}
+
+.skill-card {
+  background: v.$gris-3;
+  border: 1px solid #1d1d1d;
+  border-radius: v.$radius;
+  padding: 1.25rem;
+  box-shadow: v.$shadow;
+
+  .skill-head {
+    display: flex; align-items: center; gap: .6rem; margin-bottom: .5rem;
+    i { font-size: 1.5rem; color: v.$blanco; }
+    h2 { font-size: 1.15rem; margin: 0; }
+  }
+  .desc { color: v.$gris-1; margin-bottom: .75rem; }
+
+  .badges {
+    display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .8rem;
+    .badge-skill {
+      border: 1px solid #2a2a2a; padding: .25rem .5rem; border-radius: 999px; font-size: .85rem;
+      &.highlight { background: v.$rojo; border-color: v.$rojo; color: v.$blanco; }
+    }
+  }
+
+  .meter {
+    background: #151515; border-radius: 999px; height: .5rem; overflow: hidden; border: 1px solid #252525;
+    span { display: block; height: 100%; width: var(--val, 0%); background: linear-gradient(90deg, v.$rojo, #ff4d4d); transition: width .6s; }
+  }
+}
+
+// ---------- SERVICIOS ----------
+.service-row { border-top: 2px solid v.$rojo; }
+
+.service-wrap {
+  @include m.container();
+  display: grid; gap: 1.25rem; grid-template-columns: 1fr; align-items: center; padding: 2rem 0;
+  @include m.media(lg) { grid-template-columns: 1fr 1fr; }
+}
+
+.row-reverse {
+  @include m.media(lg) {
+    .service-text { order: 2; }
+    .service-media { order: 1; }
+  }
+}
+
+.service-text {
+  .service-icon {
+    width: 42px; height: 42px; display: grid; place-items: center;
+    background: v.$rojo; color: v.$blanco; border-radius: 10px; margin-bottom: .6rem;
+    i { font-size: 1.2rem; }
+  }
+  h2 { margin: .25rem 0 .5rem; }
+  p { color: v.$gris-1; }
+  .service-list { padding-left: 1rem; margin: .5rem 0 0; }
+}
+
+.service-media {
+  border-radius: v.$radius; overflow: hidden; box-shadow: v.$shadow;
+  img { width: 100%; height: auto; display: block; }
+}
+
+// ---------- SOBRE MÍ ----------
+.about-photo { box-shadow: v.$shadow; border-radius: v.$radius; }
+.about-list { margin-bottom: 0; }
+
+// Botones
+.btn { border-radius: v.$radius; }
+
+.service-row { background: #111; } /* la fila entera en gris */
+
+.service-wrap {
+  @include m.container();
+  display: grid; gap: 1.5rem;
+  grid-template-columns: 1fr;
+  align-items: center; padding: 2.5rem 0;
+
+  @include m.media(lg) { grid-template-columns: 1fr 1fr; }
+}
+
+.service-text {
+  .service-icon {
+    width: 44px; height: 44px;
+    display: grid; place-items: center;
+    background: v.$rojo;       // Fondo rojo
+    color: v.$negro;           // Ícono negro 👈
+    border-radius: 12px;
+    box-shadow: v.$shadow-soft;
+  }
+  p { color: v.$gris-2; }
+}
+.service-media {
+  border-radius: v.$radius; overflow: hidden; box-shadow: v.$shadow-soft;
+  img { display: block; width: 100%; height: auto; }
+}

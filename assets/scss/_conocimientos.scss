@@ -1,0 +1,76 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+/* ================================
+   Sección Conocimientos (ampliada)
+   ================================ */
+.conocimientos {
+  position: relative;
+  padding: clamp(3rem, 6vw, 7rem) 0;
+
+  &::before {
+    content: "";
+    position: absolute; inset: -20% -10% auto -10%;
+    height: 60%; pointer-events: none;
+    background:
+      radial-gradient(60% 60% at 20% 20%, rgba(v.$rojo,.18), transparent 60%),
+      radial-gradient(40% 40% at 80% 10%, rgba(255,255,255,.06), transparent 70%);
+    filter: blur(40px);
+    opacity: .65;
+  }
+}
+
+/* ---------- Título más protagonista ---------- */
+.conocimientos__titulo {
+  @include m.container();
+  display: block;
+  margin-bottom: clamp(2rem, 3vw, 3.5rem);
+  text-align: center;
+  font-size: clamp(2.4rem, 4.2vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: .4px;
+
+  background: linear-gradient(90deg, v.$blanco 0%, rgba(255,255,255,.9) 40%, rgba(v.$rojo,.75) 60%, v.$blanco 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 250% 100%;
+  animation: tituloShine 5s ease-in-out infinite;
+}
+
+/* ---------- GRID amplio ---------- */
+.conocimientos__grid,
+.skills-grid {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* ---------- Tarjetas grandes ---------- */
+.skill-card {
+  grid-column: span 12;
+
+  @media (min-width: 600px) { grid-column: span 6; }
+  @media (min-width: 1024px) { grid-column: span 3; } /* 4 columnas amplias */
+
+  min-height: 340px; /* altura base mayor */
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  border-radius: 1.3rem;
+  font-size: 1.05rem; /* texto ligeramente más grande */
+  line-height: 1.6;
+}
+
+/* ---------- Animaciones ---------- */
+@keyframes tituloShine {
+  0%   { background-position: 200% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .conocimientos__titulo { animation: none !important; }
+}

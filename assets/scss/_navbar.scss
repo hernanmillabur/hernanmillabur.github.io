@@ -1,0 +1,78 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+/* NAVBAR pegado al hacer scroll + estética oscura */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: rgba(0, 0, 0, .92);
+  border-bottom: 3px solid v.$rojo;  // 🔹 línea roja fija
+  backdrop-filter: saturate(120%) blur(4px);
+
+  .nav-wrap {
+    @include m.container();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75rem 0;
+  }
+
+  .brand {
+    color: v.$blanco;
+    font-weight: 700;
+    letter-spacing: .3px;
+    opacity: .95;
+    @include m.hover-underline(v.$rojo);
+    &:hover { opacity: 1; }
+  }
+
+  .nav-toggle { display: none; }
+
+  .burger {
+    width: 34px; height: 26px;
+    display: grid; gap: 6px;
+    cursor: pointer;
+    span {
+      display: block;
+      height: 2px;
+      background: v.$blanco;
+      transition: transform .25s, opacity .25s;
+    }
+    @include m.media(md) { display: none; }
+  }
+
+  .nav-menu {
+    ul {
+      list-style: none;
+      display: none;
+      margin: 0;
+      padding-left: 0;
+      gap: 1rem;
+    }
+
+    a {
+      color: v.$blanco;
+      opacity: .85;
+      padding: .3rem .1rem;
+      @include m.hover-underline(v.$rojo);
+
+      &.active,
+      &[aria-current="page"] {
+        font-weight: 700;
+        opacity: 1;
+        border-bottom: 2px solid v.$rojo; // 🔹 subrayado rojo del link activo
+      }
+
+      &:hover { opacity: 1; }
+    }
+
+    @include m.media(md) { ul { display: flex; } }
+  }
+
+  /* Toggle mobile */
+  .nav-toggle:checked ~ .nav-menu ul { display: grid; gap: .75rem; padding-top: .75rem; }
+  .nav-toggle:checked + .burger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .nav-toggle:checked + .burger span:nth-child(2) { opacity: 0; }
+  .nav-toggle:checked + .burger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}

@@ -1,0 +1,34 @@
+@use 'variables' as v;
+
+// ===== Mixins útiles =====
+@mixin container($max: 1200px, $pad: 16px) {
+  width: min(100% - $pad*2, $max);
+  margin-inline: auto;
+}
+
+@mixin hover-underline($color: currentColor) {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 100%; height: 2px;
+    background: $color;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+  }
+  &:hover::after { transform: scaleX(1); }
+}
+
+@mixin media($breakpoint) {
+  @if $breakpoint == sm { @media (min-width: v.$bp-sm) { @content; } }
+  @else if $breakpoint == md { @media (min-width: v.$bp-md) { @content; } }
+  @else if $breakpoint == lg { @media (min-width: v.$bp-lg) { @content; } }
+  @else if $breakpoint == xl { @media (min-width: v.$bp-xl) { @content; } }
+}
+// Sección estándar
+@mixin section() {
+  padding: 3rem 0;
+  border-top: 2px solid v.$rojo;
+}

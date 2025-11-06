@@ -1,0 +1,78 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'sass:color';
+
+// ===== Base / Reset general =====
+* { box-sizing: border-box; }
+html { font-size: 100%; }
+
+body {
+  font-family: v.$font-base;
+  background: v.$negro;      // fondo global negro
+  color: v.$blanco;          // texto blanco
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { 
+  max-width: 100%; 
+  display: block; 
+}
+
+a { 
+  color: v.$blanco; 
+  text-decoration: none; 
+  transition: color .2s ease;
+  &:hover { color: v.$rojo; }
+}
+
+// ===== Overrides Bootstrap =====
+
+// Evita íconos o textos "azules"
+.text-primary,
+.bi { color: v.$rojo !important; }
+
+// Botones primarios con tu rojo característico
+.btn-primary {
+  background-color: v.$rojo !important;
+  border-color: v.$rojo !important;
+  color: v.$blanco !important;
+  font-weight: 500;
+  transition: all .25s ease;
+
+  &:hover,
+  &:focus {
+    background-color: color.adjust(v.$rojo, $lightness: 8%) !important;
+    border-color: color.adjust(v.$rojo, $lightness: 8%) !important;
+    color: v.$blanco !important;
+  }
+}
+
+// Botones outline (rojo con borde)
+.btn-outline-primary {
+  color: v.$rojo !important;
+  border-color: v.$rojo !important;
+  &:hover,
+  &:focus {
+    background-color: v.$rojo !important;
+    color: v.$blanco !important;
+  }
+}
+
+// Fondo claro (más gris oscuro que blanco)
+.bg-light { 
+  background-color: #111 !important; 
+  color: v.$blanco !important;
+}
+
+// ===== Animaciones globales =====
+.fade-in {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: fadeInUp .5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: none; }
+}

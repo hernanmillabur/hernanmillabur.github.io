@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Conocimientos | Datos, Python y ArcGIS</title>
+  <meta name="description" content="Habilidades en análisis de datos, automatización con Python y soluciones GIS con ArcGIS.">
+  <link rel="canonical" href="https://tu-dominio/conocimientos.html" />
+
+  <!-- Bootstrap (solo CSS) + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Estilos generados por Sass -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="site-header" aria-label="Navegación principal">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Hernan Millabur Ingeniero Informatico</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+      <label for="nav-toggle" class="burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="mis-servicios.html">Servicios</a></li>
+          <li><a class="active" href="mis-conocimientos.html" aria-current="page">Conocimientos</a></li>
+          <li><a href="mi-contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Intro -->
+    <section class="skills-hero section text-center">
+      <div class="container">
+        <h1 class="mb-2">Conocimientos</h1>
+        <p class="lead text-muted">
+          Habilidades en análisis de datos, automatización con Python y GIS con ArcGIS.
+          Me enfoco en claridad, reproducibilidad y resultados accionables.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección Conocimientos (sin JS) -->
+    <section id="conocimientos" class="conocimientos">
+      <h2 class="conocimientos__titulo">Lo que domino</h2>
+
+      <div class="conocimientos__grid">
+        <!-- Python -->
+        <article class="skill-card" aria-label="Python">
+          <div class="skill-head">
+            <i class="bi bi-code-slash" aria-hidden="true"></i>
+            <h3>Python</h3>
+          </div>
+          <p class="desc">
+            ETL, limpieza, validación y análisis con <strong>Pandas</strong>, <strong>NumPy</strong> y <strong>Matplotlib</strong>.
+            Exportes a Excel/TXT y automatización diaria.
+          </p>
+          <div class="badges" aria-label="Tecnologías">
+            <span class="badge-skill highlight">Pandas</span>
+            <span class="badge-skill">NumPy</span>
+            <span class="badge-skill">Matplotlib</span>
+          </div>
+          <div class="meter" aria-hidden="true"><span style="--val:86%"></span></div>
+        </article>
+
+        <!-- Análisis de Datos -->
+        <article class="skill-card" aria-label="Análisis de Datos">
+          <div class="skill-head">
+            <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+            <h3>Análisis de Datos</h3>
+          </div>
+          <p class="desc">
+            EDA, métricas y tableros. Preparación de datasets y seguimiento de KPIs con enfoque en calidad de datos.
+          </p>
+          <div class="badges" aria-label="Tecnologías">
+            <span class="badge-skill highlight">EDA</span>
+            <span class="badge-skill">Métricas</span>
+            <span class="badge-skill">Visualización</span>
+          </div>
+          <div class="meter" aria-hidden="true"><span style="--val:82%"></span></div>
+        </article>
+
+        <!-- ArcGIS -->
+        <article class="skill-card" aria-label="ArcGIS">
+          <div class="skill-head">
+            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+            <h3>ArcGIS</h3>
+          </div>
+          <p class="desc">
+            ArcGIS Pro y <strong>ArcPy</strong> para geoprocesos, mapas temáticos y automatización de flujos GIS en entornos corporativos.
+          </p>
+          <div class="badges" aria-label="Tecnologías">
+            <span class="badge-skill highlight">ArcGIS Pro</span>
+            <span class="badge-skill">ArcPy</span>
+            <span class="badge-skill">Geoprocesos</span>
+          </div>
+          <div class="meter" aria-hidden="true"><span style="--val:88%"></span></div>
+        </article>
+
+        <!-- Otras herramientas -->
+        <article class="skill-card" aria-label="Otras herramientas">
+          <div class="skill-head">
+            <i class="bi bi-stars" aria-hidden="true"></i>
+            <h3>Otras herramientas</h3>
+          </div>
+          <p class="desc">
+            Excel avanzado, Power BI, QGIS, Google Colab, Anaconda, SQL y manejo de datos espaciales.
+          </p>
+          <div class="badges" aria-label="Tecnologías">
+            <span class="badge-skill">Power BI</span>
+            <span class="badge-skill">QGIS</span>
+            <span class="badge-skill">SQL</span>
+          </div>
+          <div class="meter" aria-hidden="true"><span style="--val:75%"></span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+      <small>© 2025 Hernan Millabur</small>
+      <nav class="d-flex gap-3" aria-label="Enlaces del pie">
+        <a class="text-light" href="https://github.com/tu-usuario" target="_blank" rel="noopener">GitHub</a>
+        <a class="text-light" href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="text-light" href="mi-contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

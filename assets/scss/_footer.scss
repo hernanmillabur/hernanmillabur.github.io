@@ -1,0 +1,9 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+footer.bg-dark {
+  border-top: 2px solid v.$rojo;
+  background: v.$gris-4 !important;
+
+  a.text-light { opacity: .9; @include m.hover-underline(v.$rojo); }
+}
